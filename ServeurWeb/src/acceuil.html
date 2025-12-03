@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Porsche 911 Turbo — Présentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Fiche descriptive de la Porsche 911 Turbo : design, performance, caractéristiques techniques et galerie." />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#d90429;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --radius:16px;
+      --maxw:1100px;
+      --shadow: 0 10px 30px rgba(2,6,23,0.7);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#07101a 0%, #0b1320 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      display:flex;
+      justify-content:center;
+      padding:40px 20px;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      margin-bottom:26px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:14px;
+    }
+    .logo{
+      width:62px;height:62px;border-radius:12px;background:linear-gradient(135deg,#111827,#0f1724);display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.03);box-shadow:var(--shadow)
+    }
+    .logo strong{font-size:20px;color:var(--accent);letter-spacing:1px}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:0;color:var(--muted)}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 380px;
+      gap:28px;
+    }
+
+    /* HERO */
+    .hero{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .hero-top{display:flex;align-items:flex-start;gap:18px}
+    .hero-image{
+      width:52%;min-width:260px;border-radius:12px;overflow:hidden;flex-shrink:0;border:1px solid rgba(255,255,255,0.03)
+    }
+    .hero-image img{width:100%;height:100%;object-fit:cover;display:block}
+    .hero-body{flex:1}
+    .kicker{display:inline-block;background:var(--glass);padding:6px 10px;border-radius:999px;font-weight:600;font-size:12px;color:var(--muted);margin-bottom:10px}
+    .title{font-size:28px;margin:6px 0 8px}
+    .subtitle{color:var(--muted);margin-bottom:14px}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+    .badge{background:var(--glass);padding:8px 12px;border-radius:12px;font-weight:600;color:#d7e6f6;font-size:13px;border:1px solid rgba(255,255,255,0.02)}
+
+    .cta-row{display:flex;gap:12px;align-items:center}
+    .btn{padding:12px 16px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#ff4d5a);color:white;box-shadow:0 8px 20px rgba(217,4,41,0.16)}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* specs */
+    .specs{margin-top:18px;background:var(--glass-2);padding:12px;border-radius:12px;display:flex;gap:12px;flex-wrap:wrap}
+    .spec{flex:1 1 140px}
+    .spec strong{display:block;font-size:18px}
+    .spec span{color:var(--muted);font-size:13px}
+
+    /* SIDEBAR */
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.03);box-shadow:var(--shadow)
+    }
+    .price{font-size:22px;font-weight:800;color:var(--accent)}
+    .meta{color:var(--muted);font-size:13px;margin-top:8px}
+    .colors{display:flex;gap:10px;margin-top:12px}
+    .swatch{width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,0.05);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+    .info{margin-top:18px;color:var(--muted);font-size:14px;line-height:1.6}
+
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+    .gallery img{width:100%;height:84px;object-fit:cover;border-radius:8px}
+
+    footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media (max-width:960px){
+      .grid{grid-template-columns:1fr}
+      .hero-image{width:100%;min-width:0}
+      .hero-top{flex-direction:column}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><strong>911</strong></div>
+        <div>
+          <h1>Porsche 911 Turbo</h1>
+          <p class="lead">L'évolution d'une icône — puissance, luxe et précision.</p>
+        </div>
+      </div>
+      <div>
+        <p class="lead">Fiche technique & description</p>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="hero">
+        <div class="hero-top">
+          <div class="hero-image">
+            <!-- Image libre de droits par défaut; remplacez par votre image si besoin -->
+            <img src="https://images.unsplash.com/photo-1549921296-3e9a6f146e07?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=9f7a8f2a3fd3b9f3d6b2b5b5c9f7a3b1" alt="Porsche 911 Turbo">
+          </div>
+          <div class="hero-body">
+            <span class="kicker">Sportive de luxe</span>
+            <h2 class="title">Porsche 911 Turbo — Performance et élégance</h2>
+            <p class="subtitle">La 911 Turbo combine l'héritage d'une icône avec la technologie d'aujourd'hui : moteur boxer biturbo, transmission performante et tenue de route exemplaire.</p>
+
+            <div class="badges">
+              <span class="badge">0–100 km/h: ~2.7 s</span>
+              <span class="badge">Puissance: 580–650 ch</span>
+              <span class="badge">Transmission: PDK / 4RM</span>
+            </div>
+
+            <div class="cta-row">
+              <button class="btn btn-primary">Demander une brochure</button>
+              <button class="btn btn-outline">Comparer modèles</button>
+            </div>
+
+            <div class="specs" aria-hidden>
+              <div class="spec">
+                <strong>Type</strong>
+                <span>Coupé 2 portes</span>
+              </div>
+              <div class="spec">
+                <strong>Moteur</strong>
+                <span>6 cylindres boxer biturbo</span>
+              </div>
+              <div class="spec">
+                <strong>Transmission</strong>
+                <span>7/8 rapports PDK & Traction intégrale</span>
+              </div>
+              <div class="spec">
+                <strong>Poids</strong>
+                <span>~1 650 kg (variable selon options)</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="info">
+          <h3 style="margin-top:16px">Description détaillée</h3>
+          <p>La Porsche 911 Turbo est réputée pour son équilibre entre raffinement et performances pures. Son châssis rigide, ses suspensions pilotées et son centre de gravité bas permettent une conduite précise que ce soit sur circuit ou sur route ouverte. L'intérieur associe matériaux nobles et équipements high-tech : écran tactile, aides à la conduite, options sportives et finition personnalisable.</p>
+
+          <h4 style="margin-top:12px">Technologie et conduite</h4>
+          <p>Les systèmes d'aide comprennent la vectorisation du couple, différentiel active et commandes électroniques d'amortissement. Le modèle Turbo intègre des turbocompresseurs optimisés pour une réponse instantanée et une plage de puissance étendue.</p>
+        </div>
+
+        <footer>
+          Photo et informations à titre indicatif. Les performances exactes dépendent de l'année, des options et des réglages.
+        </footer>
+      </section>
+
+      <aside class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div class="price">À partir de 210 000 €*</div>
+            <div class="meta">(prix indicatif, hors options et taxes)</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:12px;color:var(--muted)">Disponibilité</div>
+            <div style="font-weight:700;margin-top:6px">Concessionnaires</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <div style="font-weight:700">Couleurs disponibles</div>
+          <div class="colors">
+            <div class="swatch" style="background:#0d1b2a"></div>
+            <div class="swatch" style="background:#ffffff"></div>
+            <div class="swatch" style="background:#ff0000"></div>
+            <div class="swatch" style="background:#1f8a70"></div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px">
+          <div style="font-weight:700">Faits saillants</div>
+          <ul style="margin:8px 0 0 18px;color:var(--muted);">
+            <li>Architecture moteur emblématique Porsche</li>
+            <li>Options performance (packs sport, chrono, suspensions adaptatives)</li>
+            <li>Intérieur personnalisable jusqu'aux cuirs et finitions</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:16px">
+          <div style="font-weight:700">Galerie</div>
+          <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1511910849309-2c6f3f7d06b9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=5c3f0c4e1d2a5f8b6f9a7b1c2d3e4f5a" alt="911 side">
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e" alt="911 cockpit">
+            <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=98a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3" alt="911 rear">
+          </div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:10px">
+          <button class="btn btn-primary" style="flex:1">Planifier un essai</button>
+          <button class="btn btn-outline">Télécharger fiche</button>
+        </div>
+
+        <div style="margin-top:12px;color:var(--muted);font-size:12px">*Prix indicatif, consultez un concessionnaire pour précision</div>
+      </aside>
+
+    </main>
+
+  </div>
+</body>
+</html>
+
